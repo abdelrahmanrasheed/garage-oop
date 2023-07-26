@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Membership{
+displayAllSales()
+}
+
+
+class Register {
+garageid: String
+Register()
+getGarageid()
+setGarageid()
+}
+
+class Customer extends Register {
+Customer()
+name: String
+phone_number: String
+address: String
+getName()
+getPhone_number()
+getAddress()
+setName()
+setPhone_number()
+setAddress()
+}
+
+class Vehicle extends Register {
+manufacturer: String
+model: String
+Vehicle()
+getManufacturer()
+getModel()
+setManufacturer()
+setModel()
+}
+
+class Fees extends Register implements Membership {
+fees: double
+Fees()
+getFees()
+setFees()
+displayAllSales()
+}
+
+
+
+@enduml
